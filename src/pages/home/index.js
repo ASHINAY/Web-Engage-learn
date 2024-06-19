@@ -2,7 +2,8 @@ import React from "react";
 
 const index = () => {
   const handleButton = () => {
-    console.log("Button Clicked");
+    window?.webengage?.track(`web-${Button}`, ButtonData);
+    console.log(window.webengage);
   };
   return (
     <div
@@ -14,7 +15,10 @@ const index = () => {
       }}
     >
       <div style={{ fontSize: "18px", fontWeight: "bold" }}>Home</div>
-      <button style={{ width: "200px", height: "30px" }} onClick={handleButton}>
+      <button
+        style={{ width: "200px", height: "30px", backgroundColor: "cyan" }}
+        onClick={handleButton}
+      >
         Click Me and See in Console
       </button>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const index = () => {
   const handleButton = () => {
-    window?.webengage?.track(`web-${Button}`, ButtonData);
+    window?.webengage?.track("Home Button Click", { clickedTime: new Date() });
     console.log(window.webengage);
   };
   return (
